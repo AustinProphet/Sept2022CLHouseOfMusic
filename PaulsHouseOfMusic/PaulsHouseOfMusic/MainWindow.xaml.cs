@@ -28,7 +28,6 @@ namespace PaulsHouseOfMusic
         {
             InitializeComponent();
             BuildInventory();
-            TotalCart();
             checkoutMessage.Visibility = Visibility.Hidden;
         }
 
@@ -55,7 +54,12 @@ namespace PaulsHouseOfMusic
         private void TotalCart()
         {
             double total = 0;
-            total += inCart.Items.OfType<MusicEquipment>().Sum(item => item.Price);
+            foreach (var item in inCart.Items)
+            {
+
+                total += double.Parse(item.ToString().Substring(item.ToString().IndexOf('$')+1, item.ToString().Length - item.ToString().IndexOf('$')-1));
+                
+            }
             grandTotal.Text = $"${total}";
             
         }
@@ -67,7 +71,7 @@ namespace PaulsHouseOfMusic
             if (selected is null) return;
             forSale.Items.Remove(selected);
             inCart.Items.Add(selected);
-
+            TotalCart();
         }
 
         private void Remove_Button_Click(object sender, RoutedEventArgs e)
@@ -76,6 +80,7 @@ namespace PaulsHouseOfMusic
             if (selected is null) return;
             inCart.Items.Remove(selected);
             forSale.Items.Add(selected);
+            TotalCart();
 
         }
 
