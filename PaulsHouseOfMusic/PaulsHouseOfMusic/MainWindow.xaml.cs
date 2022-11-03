@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,7 @@ namespace PaulsHouseOfMusic
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -54,13 +56,21 @@ namespace PaulsHouseOfMusic
         private void TotalCart()
         {
             double total = 0;
+            StringBuilder dailySales = new StringBuilder();
+            var logger = new LogWriter(dailySales);
             foreach (var item in inCart.Items)
             {
 
                 total += double.Parse(item.ToString().Substring(item.ToString().IndexOf('$')+1, item.ToString().Length - item.ToString().IndexOf('$')-1));
                 
             }
+            foreach (var item in inCart.Items)
+            {
+                dailySales.AppendLine(item.ToString());
+            }
+
             grandTotal.Text = $"${total}";
+            logger.LogWrite(dailySales.ToString());
             
         }
 
@@ -97,6 +107,11 @@ namespace PaulsHouseOfMusic
         }
 
 
+
+
+
+
+        //string sql = "SELECT Name, Price FROM musicalinstruments WHERE Name != null";
 
         //private void CalculateTotal()
         //{
