@@ -56,22 +56,13 @@ namespace PaulsHouseOfMusic
         private void TotalCart()
         {
             double total = 0;
-            StringBuilder dailySales = new StringBuilder();
-            var logger = new LogWriter(dailySales);
             foreach (var item in inCart.Items)
             {
 
                 total += double.Parse(item.ToString().Substring(item.ToString().IndexOf('$')+1, item.ToString().Length - item.ToString().IndexOf('$')-1));
                 
             }
-            foreach (var item in inCart.Items)
-            {
-                dailySales.AppendLine(item.ToString());
-            }
-
             grandTotal.Text = $"${total}";
-            logger.LogWrite(dailySales.ToString());
-            
         }
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
@@ -96,6 +87,7 @@ namespace PaulsHouseOfMusic
 
         private async void Checkout_Click(object sender, RoutedEventArgs e)
         {
+            GenerateDailySalesLog();
             inCart.Items.Clear();
             forSale.Items.Clear();
             checkoutMessage.Visibility = Visibility.Visible;
@@ -104,6 +96,18 @@ namespace PaulsHouseOfMusic
             grandTotal.Text = " ";
             checkoutMessage.Visibility = Visibility.Hidden;
             BuildInventory();
+        }
+
+        public void GenerateDailySalesLog()
+        {
+            StringBuilder dailySales = new StringBuilder();
+            var logger = new LogWriter(dailySales);
+            foreach (var item in inCart.Items)
+            {
+                dailySales.AppendLine(item.ToString());
+            }
+
+            logger.LogWrite(dailySales.ToString());
         }
 
 
