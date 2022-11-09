@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PaulsHouseOfMusic"
         mc:Ignorable="d"
         Title="Paul's House Of Music" Height="500" Width="900">
-    <Grid>
+    <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="37*"/>
             <ColumnDefinition Width="26*"/>
@@ -19,29 +19,45 @@
             <RowDefinition Height="73*"/>
         </Grid.RowDefinitions>
         <TextBlock x:Name="Shopping_Cart" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Shopping Cart" VerticalAlignment="Center" TextAlignment="Center" FontSize="36" Grid.Column="2"/>
-        <ListBox x:Name="inCart" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="16,19,15,19" Grid.Row="1" HorizontalContentAlignment="Center" Grid.Column="2"/>
-        <ListBox x:Name="forSale" d:ItemsSource="{d:SampleData ItemCount=25}" FontSize="14" Grid.RowSpan="4" HorizontalContentAlignment="Center" Margin="0,67,0,0"/>
+        <ListBox x:Name="inCart" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="16,19,15,19" Grid.Row="1" HorizontalContentAlignment="Center" Grid.Column="2">
+            <ListBox.Effect>
+                <DropShadowEffect/>
+            </ListBox.Effect>
+        </ListBox>
+        <ListBox x:Name="forSale" d:ItemsSource="{d:SampleData ItemCount=25}" FontSize="14" Grid.RowSpan="4" HorizontalContentAlignment="Center" Margin="0,67,0,0">
+            <ListBox.Effect>
+                <DropShadowEffect/>
+            </ListBox.Effect>
+        </ListBox>
         <TextBlock x:Name="Add" Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Add To Cart" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" RenderTransformOrigin="0.506,-0.768"/>
         <TextBlock x:Name="Remove" Grid.Column="1" HorizontalAlignment="Center" Margin="0,101,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Remove From Cart" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
-        <TextBox x:Name="grandTotal" HorizontalAlignment="Left" Margin="150,10,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Height="47" RenderTransformOrigin="0.509,1.756" Grid.Column="2"/>
+        <TextBox x:Name="grandTotal" HorizontalAlignment="Left" Margin="150,10,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Height="47" RenderTransformOrigin="0.509,1.756" Grid.Column="2" FontSize="24">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
         <TextBlock x:Name="Total" HorizontalAlignment="Left" Margin="228,16,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="22" Width="151" Text="              Total:" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button x:Name="Checkout" Content="Checkout" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="32" Width="228" IsDefault="True" FontSize="20" FontWeight="Bold" Grid.Column="2" Click="Checkout_Click">
+        <Button x:Name="Checkout" Background="White" Content="Checkout" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="32" Width="228" IsDefault="True" FontSize="20" FontWeight="Bold" Grid.Column="2" Click="Checkout_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="   Available Items" VerticalAlignment="Top" Height="47" Width="281" FontSize="36" Margin="0,9,0,0"/>
-        <Button x:Name="Add_Button" Grid.Column="1" Content="&gt;&gt;" HorizontalAlignment="Center" Margin="0,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" Height="32" FontSize="16" Click="Add_Button_Click">
+        <Button x:Name="Add_Button" Background="White" Grid.Column="1" Content="&gt;&gt;" HorizontalAlignment="Center" Margin="0,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" Height="32" FontSize="16" Click="Add_Button_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="Remove_Button" Grid.Column="1" Content="&lt;&lt;" HorizontalAlignment="Center" Margin="0,138,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.381,0.139" Width="134" Height="32" FontSize="16" Click="Remove_Button_Click">
+        <Button x:Name="Remove_Button" Background="White" Grid.Column="1" Content="&lt;&lt;" HorizontalAlignment="Center" Margin="0,138,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.381,0.139" Width="134" Height="32" FontSize="16" Click="Remove_Button_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <TextBox x:Name="checkoutMessage" Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="210" Height="131" Grid.RowSpan="2" TextAlignment="Center"/>
+        <TextBox x:Name="checkoutMessage" Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="210" Height="131" Grid.RowSpan="2" TextAlignment="Center" BorderThickness="1,1,1,1" SnapsToDevicePixels="True">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
 
     </Grid>
 </Window>

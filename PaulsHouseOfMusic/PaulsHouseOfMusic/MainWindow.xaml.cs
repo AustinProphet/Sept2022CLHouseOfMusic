@@ -18,6 +18,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
+
 namespace PaulsHouseOfMusic
 {
     /// <summary>
@@ -87,15 +88,26 @@ namespace PaulsHouseOfMusic
 
         private async void Checkout_Click(object sender, RoutedEventArgs e)
         {
-            GenerateDailySalesLog();
-            inCart.Items.Clear();
-            forSale.Items.Clear();
-            checkoutMessage.Visibility = Visibility.Visible;
-            checkoutMessage.Text = "Thank you for shopping at Paul's House Of Music \n Your purchase has been completed and your receipt has been emailed to \n User@user.com";
-            await Task.Delay(3000);
-            grandTotal.Text = " ";
-            checkoutMessage.Visibility = Visibility.Hidden;
-            BuildInventory();
+
+            if (inCart.Items.Count == 0)
+            {
+                checkoutMessage.Visibility = Visibility.Visible;
+                checkoutMessage.Text = "There are no items in your cart! Please add items to checkout";
+                await Task.Delay(3000);
+                checkoutMessage.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                GenerateDailySalesLog();
+                inCart.Items.Clear();
+                forSale.Items.Clear();
+                checkoutMessage.Visibility = Visibility.Visible;
+                checkoutMessage.Text = "Thank you for shopping at Paul's House Of Music \n Your purchase has been completed and your receipt has been emailed to \n User@user.com";
+                await Task.Delay(3000);
+                grandTotal.Text = " ";
+                checkoutMessage.Visibility = Visibility.Hidden;
+                BuildInventory();
+            }
         }
 
         public void GenerateDailySalesLog()
