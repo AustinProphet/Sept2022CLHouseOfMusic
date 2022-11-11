@@ -36,3 +36,11 @@ C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\obj\Debug\Pau
 C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\obj\Debug\PaulsHouseOfMusic.csproj.CopyComplete
 C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\obj\Debug\PaulsHouseOfMusic.exe
 C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\obj\Debug\PaulsHouseOfMusic.pdb
+C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\bin\Debug\EntityFramework.dll
+C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\bin\Debug\EntityFramework.xml
+C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\bin\Debug\System.Data.SQLite.dll
+C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Code\Sept2022CLHouseOfMusic\PaulsHouseOfMusic\PaulsHouseOfMusic\bin\Debug\System.Data.SQLite.xml

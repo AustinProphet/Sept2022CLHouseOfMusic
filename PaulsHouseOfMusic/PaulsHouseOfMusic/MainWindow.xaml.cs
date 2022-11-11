@@ -36,22 +36,14 @@ namespace PaulsHouseOfMusic
 
         public void BuildInventory()
         {
-            string file = "musicalinstruments.json";
-            if (File.Exists(file))
-            {
-                string json = File.ReadAllText(file);
-                var inventory = JsonConvert.DeserializeObject<List<MusicEquipment>>(json);
 
-                foreach (var item in inventory)
-                {
-                    forSale.Items.Add($"{item.Name}............${item.Price}");
-                }
-            }
-            else
-            {
-                forSale.Items.Add("No Items In Inventory!");
-            }
+            InventoryBuilder inventoryBuilder = new InventoryBuilder();
+            List<MusicEquipment> list = inventoryBuilder.ReadData();
 
+            foreach (var item in list)
+            {
+                forSale.Items.Add($"{item.Name}............${item.Price}");
+            }
         }
 
         private void TotalCart()
