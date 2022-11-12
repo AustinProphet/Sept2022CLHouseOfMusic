@@ -86,7 +86,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="InventoryBuilder.cs" />
-    <Compile Include="ItemsInCart.cs" />
     <Compile Include="LogWriter.cs" />
     <Compile Include="MusicEquipment.cs" />
     <Compile Include="MainWindow.xaml.cs">

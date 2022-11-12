@@ -10,7 +10,7 @@ namespace PaulsHouseOfMusic
     {
         public string Name { get; set; } 
         public double Price { get; set; }
-        
+
     }
 
     //List<MusicEquipment> inventory = new List<MusicEquipment>();
@@ -19,6 +19,8 @@ namespace PaulsHouseOfMusic
     //    Name = "Electric Guitar Strings",
     //    Price = 3.99
     //});
+}
+
     //inventory.Add(new MusicEquipment
     //{
     //    Name = "Acoustic Guitar Strings",
@@ -140,4 +142,4 @@ namespace PaulsHouseOfMusic
     //    Price = 2.99
     //});
     //File.WriteAllText("musicalinstruments.json", JsonConvert.SerializeObject(inventory));
-}
+
