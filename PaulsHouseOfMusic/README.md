@@ -8,6 +8,7 @@ This projects includes the following features from the Code Louisville Project R
 
 <ul>
 <li>The inventory is read from a SQLite database with one table called Music Equipment.</li>
+<li>The Music Equipment Database is queried using a raw SQL command in the Inventory Builder Class</li>
 <li>The inventory builder ceates a list of objects of type MusicEquipment and displays it in the inventory List Box.</li>
 <li>Once you have checked out your cart and ended the program you will find a DailySales.txt file in the Debug bin that logs the sales transactions.</li>
 </ul>
