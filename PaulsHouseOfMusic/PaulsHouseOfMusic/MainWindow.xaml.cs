@@ -114,29 +114,5 @@ namespace PaulsHouseOfMusic
             logger.LogWrite(dailySales.ToString());
         }
 
-
-
-
-
-
-        //string sql = "SELECT Name, Price FROM musicalinstruments WHERE Name != null";
-
-        //private void CalculateTotal()
-        //{
-        //    //List<double> total =
-
-
-
-        //}
-
-
-
-        //private void forSale_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    int i = 0;
-        //    while (forSale.SelectedItem != salePrice.Items[i])
-        //        i++;
-        //    salePrice.SelectedIndex = i;
-        //}
     }
 }
